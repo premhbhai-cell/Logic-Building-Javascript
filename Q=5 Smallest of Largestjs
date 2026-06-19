@@ -1,0 +1,39 @@
+// first method using Math.min and spread operator
+
+const arr = [7, 3, 9, 1, 5];
+console.log(Math.min(...arr));
+
+
+
+
+// Second Using for Loop 
+let arr = [5, 2, 9, 1, 7];
+
+let smallest = arr[0];
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+        smallest = arr[i];
+    }
+};
+
+console.log("Smallest number:", smallest);
+
+
+
+// third Using reduce method
+
+let arr = [5, 2, 9, 1, 7];
+
+const smallest = arr.reduce((min, current) => {
+    return current < min ? current : min;
+});
+
+console.log(smallest);
+
+
+
+// forth  Using short method
+
+let arr = [5, 2, 9, 1, 7];
+const smallest = arr.sort((a, b) => a - b)[0];
+console.log(smallest);
